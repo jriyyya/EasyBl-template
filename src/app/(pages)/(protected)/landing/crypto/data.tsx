@@ -85,9 +85,9 @@ const features: Feature[] = [
         </g>
       </svg>
     ),
-    title: 'Secure & Encrypted Transactions',
+    title: 'User-Friendly Interface',
     description:
-      'Advanced payment and processing technologies, fine-tuned from more than 3 years development',
+      'Our intuitive platform is designed for ease of use, ensuring a seamless experience for both beginners and experienced trade professionals.',
   },
   {
     icon: (
@@ -131,9 +131,9 @@ const features: Feature[] = [
         </g>
       </svg>
     ),
-    title: 'Transparent Fees',
+    title: 'Compliance Assurance',
     description:
-      'Barbelless catfish pelican gulper candlefish thornfishGulf menhaden ribbonbearer riffle.',
+      'Easy BL is dedicated to upholding the highest standards of compliance, particularly in adherence to the MLETR framework. Your electronic transactions are secure, legally recognized, and meet international standards.',
   },
   {
     icon: (
@@ -164,9 +164,9 @@ const features: Feature[] = [
         </g>
       </svg>
     ),
-    title: 'Easy to Use',
+    title: 'Advanced Security Measures',
     description:
-      'Asiatic glassfish pilchard sandburrower, orangestriped triggerfish hamlet Molly Miller dogfish!',
+      'Security is paramount at Easy BL. Our platform employs state-of-the-art security measures to safeguard your sensitive trade documents and transactions.',
   },
   {
     icon: (
@@ -193,9 +193,9 @@ const features: Feature[] = [
         </g>
       </svg>
     ),
-    title: 'Quality Support',
+    title: 'Real-time Document Tracking',
     description:
-      'Clownfish catfish antenna codlet alfonsino squirrelfish deepwater flathead sea lamprey.',
+      'Stay in control of your trade documents with our real-time tracking feature. Know the status of your eBLs and eInvoices at every stage of the transaction.',
   },
 ]
 

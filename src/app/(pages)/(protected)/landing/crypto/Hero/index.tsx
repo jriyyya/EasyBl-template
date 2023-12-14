@@ -12,16 +12,15 @@ const Hero = () => {
       <div className="container">
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 items-center">
           <div>
-            <h1 className="md:text-5xl/tight text-3xl font-semibold mb-7">
+            <h1 className="md:text-5xl/tight text-3xl font-semibold mb-7 text-slate-700">
               <span className="relative after:bg-green-200 md:after:h-6 after:h-4 after:w-full after:inset-x-0 after:bottom-0 after:absolute after:-z-10">
               Easy BL
               </span>
               &nbsp; -Transforming Trade with Seamless Docs!&nbsp;
-              <CryptoTypist />
+              {/* <CryptoTypist /> */}
             </h1>
             <p className="text-slate-500 leading-7">
-              A seamless, flexible and diverse platform to buy, sell and manage
-              your cryptocurrency portfolio
+            Our platform is designed to meet the highest standards of compliance, particularly in the realm of MLETR (Model Law on Electronic Transferable Records), ensuring that your electronic document transactions are secure, efficient, and legally recognized.
             </p>
             <div className="py-14">
               <div className="flex flex-wrap items-center gap-4">
@@ -34,7 +33,7 @@ const Hero = () => {
                 </Link>
               </div>
               <p className="text-slate-4 mt-2">
-                Already using Prompt?&nbsp;
+                Already using EasyBL?&nbsp;
                 <Link href="" className="text-slate-800 hover:text-primary">
                   Log In
                 </Link>

@@ -18,7 +18,7 @@ const Features = ({ features }: { features: Feature[] }) => {
             Why Choose Us
           </span>
           <h1 className="text-3xl font-medium my-3">
-            The most trusted way to buy or sell crypto currency
+          Easy BL for Effortless Trade Transformation
           </h1>
           <p className="text-slate-400 mt-5 mb-4">
             Here are the few reasons why you should choose us
