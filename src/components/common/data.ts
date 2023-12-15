@@ -157,15 +157,13 @@ const pricingCards: PricingCard = {
   },
 }
 
-const footerLinks: FooterLink = {
-  platform: {
-    links: ['Demo', 'Pricing', 'Integrations', 'Status'],
-  },
-  'Knowledge Base': {
-    links: ['Blog', 'Help Center', 'Sales Tools catalog', 'API'],
+const footerLinks: FooterLink =
+{
+  'Products': {
+    links: ['Blockpeer-Tech', 'Easy BL',],
   },
   company: {
-    links: ['About us', 'Career', 'Contact Us'],
+    links: ['About us', 'Contact Us'],
   },
   legal: {
     links: ['Usage Policy', 'Privacy Policy', 'Terms of Service', 'Trust'],

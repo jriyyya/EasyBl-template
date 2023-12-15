@@ -5,23 +5,31 @@ import { footerLinks } from './data'
 //image
 import logoDark from '@/assets/images/logo-dark.png'
 
+import logo from '@/assets/logo.png';
+
 const Footer = () => {
   return (
     <footer className="bg-gray-100">
       <div className="container">
         <div className="grid xl:grid-cols-5 gap-6 py-12">
           <div className="xl:col-span-2">
-            <Link href="/">
-              <Image
-                width={126}
+            <div>
+
+            <Link href="/" className='flex justify-start text-2xl font-bold'>
+              {/* <Image
+                width={50}
                 height={32}
                 alt="logoDark"
-                src={logoDark}
+                src={logo}
                 className="h-8"
-              />
+                /> */}
+                <div>
+                  EasyBL
+                </div>
             </Link>
+                </div>
             <p className="text-gray-500/80 mt-5 lg:w-4/5">
-              Make your web application stand out with high-quality landing page
+            Simplifying Trade with MLETR-Compliant Electronic Document Transmission!
             </p>
           </div>
           <div className="xl:col-span-3 col-span-4">
@@ -46,16 +54,9 @@ const Footer = () => {
         <div className="border-t py-6">
           <div className="grid sm:grid-cols-2 text-center sm:text-start gap-6">
             <div>
-              <p className="text-gray-500/80 text-sm">
-                {new Date().getFullYear()}© Prompt. All rights reserved.
-                Crafted by
-                <Link
-                  href=""
-                  className="text-gray-800 hover:text-primary transition-all"
-                >
-                  Coderthemes
-                </Link>
-              </p>
+            <p className="my-5">
+              2023© EasyBL. All rights reserved. 
+            </p>
             </div>
             <div className="flex justify-center sm:justify-end gap-7">
               <div>

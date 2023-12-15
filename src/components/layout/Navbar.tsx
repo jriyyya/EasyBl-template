@@ -7,10 +7,10 @@ import { OffcanvasLayout } from '@/components'
 import AppMenu from './Menu'
 import VerticalMenu from './VerticalMenu'
 import { useToggle } from '@/hooks'
-
 //images
 import logoDark from '@/assets/images/logo-dark.png'
 import { FaBars, FaXmark } from 'react-icons/fa6'
+import logo from '@/assets/logo.png'
 
 const Navbar = () => {
   const [isOpenOffcanvas, toggleOffcanvas, _openOffcanvas, closeOffcanvas] =
@@ -43,16 +43,19 @@ const Navbar = () => {
       >
         <div className="container">
           <nav className="flex items-center">
-            <Link href="/">
-              <Image src={logoDark} className="h-8" width={126} alt="Logo" />
+            <Link href="/" className='flex items-center gap-x-4'>
+             {/* <Image width={50} height={50} src={logo} alt='logo'/> */}
+             <div className='text-3xl text-blue-900 mt-2 tracking-tight font-extrabold'>
+              EasyBL
+              </div>
             </Link>
             <div className="lg:block hidden ms-auto">
-              <AppMenu menuItems={getHorizontalMenuItems()} />
+              <Link href="/about">About Us</Link>
             </div>
             <div className="hidden lg:flex items-center ms-3">
-              <button className="bg-primary text-white px-4 py-2 rounded inline-flex items-center text-sm">
-                Download
-              </button>
+              <Link href="/contact" className="bg-primary text-white px-4 py-2 rounded inline-flex items-center text-sm">
+                Contact Us
+              </Link>
             </div>
             <div className="lg:hidden flex items-center ms-auto px-2.5">
               <button type="button" onClick={toggleOffcanvas}>
