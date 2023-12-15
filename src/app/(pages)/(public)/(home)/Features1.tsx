@@ -1,5 +1,5 @@
 // types
-import { Feature1 } from './types'
+import { Feature1 } from '../../(protected)/landing/crypto/types'
 
 const Features1 = ({ features }: { features: Feature1[] }) => {
   return (

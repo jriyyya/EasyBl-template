@@ -1,160 +1,62 @@
-//types
-import { Demo, Feature } from './types'
+// types
+import {
+  FaBitcoin,
+  FaBitcoinSign,
+  FaDiamond,
+  FaDochub,
+  FaDropbox,
+  FaEthereum,
+  FaLock,
+  FaT,
+  FaTiktok,
+} from 'react-icons/fa6'
+import { Coin, Feature, Feature1 } from '../../(protected)/landing/crypto/types'
+import { Service } from '../../(protected)/landing/agency/types'
 
-// images
-import homeApp from '@/assets/images/demo/home-app.jpg'
-import homeSaas from '@/assets/images/demo/home-saas.jpg'
-import homeSaas2 from '@/assets/images/demo/home-saas2.jpg'
-import homeStartup from '@/assets/images/demo/home-startup.jpg'
-import homeSoftware from '@/assets/images/demo/home-software.jpg'
-import homeAgency from '@/assets/images/demo/home-agency.jpg'
-import homeCoworking from '@/assets/images/demo/home-coworking.jpg'
-import homeCrypto from '@/assets/images/demo/home-crypto.jpg'
-import homeMarketing from '@/assets/images/demo/home-marketing.jpg'
-import homePortfolio from '@/assets/images/demo/home-portfolio.jpg'
-
-import company from '@/assets/images/demo/company.jpg'
-import contact from '@/assets/images/demo/contact.jpg'
-import career from '@/assets/images/demo/career.jpg'
-import blog from '@/assets/images/demo/blog.jpg'
-import blogPost from '@/assets/images/demo/blog-post.jpg'
-import portfolioGrid from '@/assets/images/demo/portfolio-grid.jpg'
-import portfolioMasonry from '@/assets/images/demo/portfolio-masonry.jpg'
-import portfolioItem from '@/assets/images/demo/portfolio-item.jpg'
-import pricing from '@/assets/images/demo/pricing.jpg'
-import help from '@/assets/images/demo/help.jpg'
-
-import authLogin from '@/assets/images/demo/auth-login.jpg'
-import authSignup from '@/assets/images/demo/auth-signup.jpg'
-import authPassword from '@/assets/images/demo/auth-password.jpg'
-import authConfirm from '@/assets/images/demo/auth-confirm.jpg'
-
-const landings: Demo[] = [
+const coins: Coin[] = [
   {
-    image: homeApp,
-    url: '/landing/app',
-    name: 'Mobile App',
+    icon: FaBitcoin,
+    name: 'Bitcoin',
+    size: 'text-5xl',
+    variant: 'bg-orange-400',
   },
   {
-    image: homeSaas,
-    url: '/landing/sass-modern',
-    name: 'Saas Modern',
+    icon: FaEthereum,
+    name: 'Ethereum',
+    size: 'text-3xl',
+    variant: 'bg-blue-500',
   },
   {
-    image: homeSaas2,
-    url: '/landing/sass-classic',
-    name: 'Saas Classic',
+    icon: FaT,
+    name: 'Tether',
+    variant: 'bg-emerald-700',
   },
   {
-    image: homeStartup,
-    url: '/landing/startup',
-    name: 'Startup',
+    icon: FaLock,
+    name: 'Chainlink',
+    variant: 'bg-sky-500',
+    isSolid: true,
   },
   {
-    image: homeSoftware,
-    url: '/landing/software',
-    name: 'Software',
+    icon: FaDiamond,
+    name: 'Basic Attention Token',
+    variant: 'bg-red-500',
+    isSolid: true,
   },
   {
-    image: homeAgency,
-    url: '/landing/agency',
-    name: 'Agency',
+    icon: FaDochub,
+    name: 'Dash',
+    variant: 'bg-sky-500',
   },
   {
-    image: homeCoworking,
-    url: '/landing/coworking',
-    name: 'Co-Working',
+    icon: FaDropbox,
+    name: 'Binance Coin',
+    variant: 'bg-amber-300',
   },
   {
-    image: homeCrypto,
-    url: '/landing/crypto',
-    name: 'Crypto',
-  },
-  {
-    image: homeMarketing,
-    url: '/landing/marketing',
-    name: 'Marketing',
-  },
-  {
-    image: homePortfolio,
-    url: '/landing/portfolio',
-    name: 'Portfolio',
-  },
-]
-
-const secondaryPages: Demo[] = [
-  {
-    image: company,
-    url: '/pages/company',
-    name: 'Company',
-  },
-  {
-    image: contact,
-    url: '/contact-us',
-    name: 'Contact',
-  },
-  {
-    image: career,
-    url: '/pages/career',
-    name: 'Career',
-  },
-  {
-    image: blog,
-    url: '/pages/blogs/list',
-    name: 'Blog',
-  },
-  {
-    image: blogPost,
-    url: '/pages/blogs/post',
-    name: 'Blog-Post',
-  },
-  {
-    image: portfolioGrid,
-    url: '/pages/portfolio/grid',
-    name: 'Portfolio Grid',
-  },
-  {
-    image: portfolioMasonry,
-    url: '/pages/portfolio/masonry',
-    name: 'Portfolio Masonry',
-  },
-  {
-    image: portfolioItem,
-    url: '/pages/portfolio/item',
-    name: 'Portfolio-item',
-  },
-  {
-    image: pricing,
-    url: '/pages/pricing',
-    name: 'Pricing',
-  },
-  {
-    image: help,
-    url: '/pages/help',
-    name: 'Help',
-  },
-]
-
-const accountPages: Demo[] = [
-  {
-    image: authLogin,
-    url: 'auth/login',
-    name: 'Login',
-  },
-  {
-    image: authSignup,
-    url: 'auth/register',
-    name: 'SignUp',
-  },
-  {
-    image: authPassword,
-    url: 'auth/forgot-password',
-    name: 'Forget Password',
-  },
-  {
-    image: authConfirm,
-    url: 'auth/confirm-account',
-    name: 'Confirm Account',
+    icon: FaTiktok,
+    name: 'Tezos',
+    variant: 'bg-green-500',
   },
 ]
 
@@ -162,32 +64,7 @@ const features: Feature[] = [
   {
     icon: (
       <svg
-        className="w-6 h-6 text-primary"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 54 33"
-      >
-        <g clipPath="url(#prefix__clip0)">
-          <path
-            fill="#38bdf8"
-            fillRule="evenodd"
-            d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
-            clipRule="evenodd"
-          />
-        </g>
-        <defs>
-          <clipPath id="prefix__clip0">
-            <path fill="#fff" d="M0 0h54v32.4H0z" />
-          </clipPath>
-        </defs>
-      </svg>
-    ),
-    name: 'Based on latest Tailwind v3.3.2',
-  },
-  {
-    icon: (
-      <svg
-        className="w-6 h-6 text-primary"
+        className="w-7 h-7 text-primary"
         viewBox="0 0 24 24"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -196,25 +73,27 @@ const features: Feature[] = [
         <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
           <rect id="bound" x={0} y={0} width={24} height={24} />
           <path
-            d="M8,2.5 C7.30964406,2.5 6.75,3.05964406 6.75,3.75 L6.75,20.25 C6.75,20.9403559 7.30964406,21.5 8,21.5 L16,21.5 C16.6903559,21.5 17.25,20.9403559 17.25,20.25 L17.25,3.75 C17.25,3.05964406 16.6903559,2.5 16,2.5 L8,2.5 Z"
-            id="Combined-Shape"
+            d="M4,4 L11.6314229,2.5691082 C11.8750185,2.52343403 12.1249815,2.52343403 12.3685771,2.5691082 L20,4 L20,13.2830094 C20,16.2173861 18.4883464,18.9447835 16,20.5 L12.5299989,22.6687507 C12.2057287,22.8714196 11.7942713,22.8714196 11.4700011,22.6687507 L8,20.5 C5.51165358,18.9447835 4,16.2173861 4,13.2830094 L4,4 Z"
+            id="Path-50"
             fill="currentcolor"
             opacity="0.3"
           />
           <path
-            d="M8,2.5 C7.30964406,2.5 6.75,3.05964406 6.75,3.75 L6.75,20.25 C6.75,20.9403559 7.30964406,21.5 8,21.5 L16,21.5 C16.6903559,21.5 17.25,20.9403559 17.25,20.25 L17.25,3.75 C17.25,3.05964406 16.6903559,2.5 16,2.5 L8,2.5 Z M8,1 L16,1 C17.5187831,1 18.75,2.23121694 18.75,3.75 L18.75,20.25 C18.75,21.7687831 17.5187831,23 16,23 L8,23 C6.48121694,23 5.25,21.7687831 5.25,20.25 L5.25,3.75 C5.25,2.23121694 6.48121694,1 8,1 Z M9.5,1.75 L14.5,1.75 C14.7761424,1.75 15,1.97385763 15,2.25 L15,3.25 C15,3.52614237 14.7761424,3.75 14.5,3.75 L9.5,3.75 C9.22385763,3.75 9,3.52614237 9,3.25 L9,2.25 C9,1.97385763 9.22385763,1.75 9.5,1.75 Z"
-            id="Combined-Shape"
+            d="M11.1750002,14.75 C10.9354169,14.75 10.6958335,14.6541667 10.5041669,14.4625 L8.58750019,12.5458333 C8.20416686,12.1625 8.20416686,11.5875 8.58750019,11.2041667 C8.97083352,10.8208333 9.59375019,10.8208333 9.92916686,11.2041667 L11.1750002,12.45 L14.3375002,9.2875 C14.7208335,8.90416667 15.2958335,8.90416667 15.6791669,9.2875 C16.0625002,9.67083333 16.0625002,10.2458333 15.6791669,10.6291667 L11.8458335,14.4625 C11.6541669,14.6541667 11.4145835,14.75 11.1750002,14.75 Z"
+            id="check-path"
             fill="currentcolor"
           />
         </g>
       </svg>
     ),
-    name: 'Fully Responsive',
+    title: 'User-Friendly Interface',
+    description:
+      'Our intuitive platform is designed for ease of use, ensuring a seamless experience for both beginners and experienced trade professionals.',
   },
   {
     icon: (
       <svg
-        className="w-6 h-6 text-primary"
+        className="w-7 h-7 text-primary"
         viewBox="0 0 24 24"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -223,57 +102,44 @@ const features: Feature[] = [
         <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
           <rect id="bound" x={0} y={0} width={24} height={24} />
           <rect
-            id="Rectangle-7-Copy"
+            id="Combined-Shape"
             fill="currentcolor"
+            opacity="0.3"
             x={2}
             y={5}
-            width={19}
-            height={4}
-            rx={1}
+            width={20}
+            height={14}
+            rx={2}
           />
           <rect
-            id="Rectangle-7-Copy-4"
+            id="Rectangle-59"
+            fill="currentcolor"
+            x={2}
+            y={8}
+            width={20}
+            height={3}
+          />
+          <rect
+            id="Rectangle-59-Copy"
             fill="currentcolor"
             opacity="0.3"
-            x={2}
-            y={11}
-            width={19}
-            height={10}
+            x={16}
+            y={14}
+            width={4}
+            height={2}
             rx={1}
           />
         </g>
       </svg>
     ),
-    name: 'Cross-browser compatible',
-  },
-  {
-    name: 'Sass Powered',
-  },
-  {
-    icon: (
-      <svg
-        className="w-6 h-6 text-primary"
-        viewBox="0 0 24 24"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-      >
-        <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
-          <rect id="bound" x={0} y={0} width={24} height={24} />
-          <path
-            d="M12,20 C7.581722,20 4,16.418278 4,12 C4,7.581722 7.581722,4 12,4 C16.418278,4 20,7.581722 20,12 C20,16.418278 16.418278,20 12,20 Z M12,5.99999664 C8.6862915,6 6,8.6862915 6,12 C6,15.3137085 8.6862915,18 12,18.0000034 L12,5.99999664 Z"
-            id="Combined-Shape"
-            fill="currentColor"
-          />
-        </g>
-      </svg>
-    ),
-    name: 'Easy to customize',
+    title: 'Compliance Assurance',
+    description:
+      'Easy BL is dedicated to upholding the highest standards of compliance, particularly in adherence to the MLETR framework. Your electronic transactions are secure, legally recognized, and meet international standards.',
   },
   {
     icon: (
       <svg
-        className="w-6 h-6 text-primary"
+        className="w-7 h-7 text-primary"
         viewBox="0 0 24 24"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -283,7 +149,7 @@ const features: Feature[] = [
           <rect id="bound" x={0} y={0} width={24} height={24} />
           <rect
             id="Combined-Shape"
-            fill="currentColor"
+            fill="currentcolor"
             opacity="0.3"
             x={2}
             y={2}
@@ -294,17 +160,19 @@ const features: Feature[] = [
           <path
             d="M6.16794971,14.5547002 C5.86159725,14.0951715 5.98577112,13.4743022 6.4452998,13.1679497 C6.90482849,12.8615972 7.52569784,12.9857711 7.83205029,13.4452998 C8.9890854,15.1808525 10.3543313,16 12,16 C13.6456687,16 15.0109146,15.1808525 16.1679497,13.4452998 C16.4743022,12.9857711 17.0951715,12.8615972 17.5547002,13.1679497 C18.0142289,13.4743022 18.1384028,14.0951715 17.8320503,14.5547002 C16.3224187,16.8191475 14.3543313,18 12,18 C9.64566871,18 7.67758127,16.8191475 6.16794971,14.5547002 Z"
             id="Path-56"
-            fill="currentColor"
+            fill="currentcolor"
           />
         </g>
       </svg>
     ),
-    name: 'Developer Friendly',
+    title: 'Advanced Security Measures',
+    description:
+      'Security is paramount at Easy BL. Our platform employs state-of-the-art security measures to safeguard your sensitive trade documents and transactions.',
   },
   {
     icon: (
       <svg
-        className="w-6 h-6 text-primary"
+        className="w-7 h-7 text-primary"
         viewBox="0 0 24 24"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -313,99 +181,198 @@ const features: Feature[] = [
         <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
           <rect id="bound" x={0} y={0} width={24} height={24} />
           <path
-            d="M17.2718029,8.68536757 C16.8932864,8.28319382 16.9124644,7.65031935 17.3146382,7.27180288 C17.7168119,6.89328641 18.3496864,6.91246442 18.7282029,7.31463817 L22.7282029,11.5646382 C23.0906029,11.9496882 23.0906029,12.5503176 22.7282029,12.9353676 L18.7282029,17.1853676 C18.3496864,17.5875413 17.7168119,17.6067193 17.3146382,17.2282029 C16.9124644,16.8496864 16.8932864,16.2168119 17.2718029,15.8146382 L20.6267538,12.2500029 L17.2718029,8.68536757 Z M6.72819712,8.6853647 L3.37324625,12.25 L6.72819712,15.8146353 C7.10671359,16.2168091 7.08753558,16.8496835 6.68536183,17.2282 C6.28318808,17.6067165 5.65031361,17.5875384 5.27179713,17.1853647 L1.27179713,12.9353647 C0.909397125,12.5503147 0.909397125,11.9496853 1.27179713,11.5646353 L5.27179713,7.3146353 C5.65031361,6.91246155 6.28318808,6.89328354 6.68536183,7.27180001 C7.08753558,7.65031648 7.10671359,8.28319095 6.72819712,8.6853647 Z"
+            d="M13.0799676,14.7839934 L15.2839934,12.5799676 C15.8927139,11.9712471 16.0436229,11.0413042 15.6586342,10.2713269 L15.5337539,10.0215663 C15.1487653,9.25158901 15.2996742,8.3216461 15.9083948,7.71292558 L18.6411989,4.98012149 C18.836461,4.78485934 19.1530435,4.78485934 19.3483056,4.98012149 C19.3863063,5.01812215 19.4179321,5.06200062 19.4419658,5.11006808 L20.5459415,7.31801948 C21.3904962,9.0071287 21.0594452,11.0471565 19.7240871,12.3825146 L13.7252616,18.3813401 C12.2717221,19.8348796 10.1217008,20.3424308 8.17157288,19.6923882 L5.75709327,18.8875616 C5.49512161,18.8002377 5.35354162,18.5170777 5.4408655,18.2551061 C5.46541191,18.1814669 5.50676633,18.114554 5.56165376,18.0596666 L8.21292558,15.4083948 C8.8216461,14.7996742 9.75158901,14.6487653 10.5215663,15.0337539 L10.7713269,15.1586342 C11.5413042,15.5436229 12.4712471,15.3927139 13.0799676,14.7839934 Z"
+            id="Path-76"
+            fill="currentcolor"
+          />
+          <path
+            d="M14.1480759,6.00715131 L13.9566988,7.99797396 C12.4781389,7.8558405 11.0097207,8.36895892 9.93933983,9.43933983 C8.8724631,10.5062166 8.35911588,11.9685602 8.49664195,13.4426352 L6.50528978,13.6284215 C6.31304559,11.5678496 7.03283934,9.51741319 8.52512627,8.02512627 C10.0223249,6.52792766 12.0812426,5.80846733 14.1480759,6.00715131 Z M14.4980938,2.02230302 L14.313049,4.01372424 C11.6618299,3.76737046 9.03000738,4.69181803 7.1109127,6.6109127 C5.19447112,8.52735429 4.26985715,11.1545872 4.51274152,13.802405 L2.52110319,13.985098 C2.22450978,10.7517681 3.35562581,7.53777247 5.69669914,5.19669914 C8.04101739,2.85238089 11.2606138,1.72147333 14.4980938,2.02230302 Z"
+            id="Combined-Shape"
+            fill="currentcolor"
+            opacity="0.3"
+          />
+        </g>
+      </svg>
+    ),
+    title: 'Real-time Document Tracking',
+    description:
+      'Stay in control of your trade documents with our real-time tracking feature. Know the status of your eBLs and eInvoices at every stage of the transaction.',
+  },
+]
+
+const benefits: Service[] = [
+  {
+    icon: (
+      <svg
+        className="w-7 h-7 text-primary"
+        viewBox="0 0 24 24"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+      >
+        <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
+          <rect id="bound" x={0} y={0} width={24} height={24} />
+          <path
+            d="M12,10.9996338 C12.8356605,10.3719448 13.8743941,10 15,10 C17.7614237,10 20,12.2385763 20,15 C20,17.7614237 17.7614237,20 15,20 C13.8743941,20 12.8356605,19.6280552 12,19.0003662 C11.1643395,19.6280552 10.1256059,20 9,20 C6.23857625,20 4,17.7614237 4,15 C4,12.2385763 6.23857625,10 9,10 C10.1256059,10 11.1643395,10.3719448 12,10.9996338 Z M13.3336047,12.504354 C13.757474,13.2388026 14,14.0910788 14,15 C14,15.9088933 13.7574889,16.761145 13.3336438,17.4955783 C13.8188886,17.8206693 14.3938466,18 15,18 C16.6568542,18 18,16.6568542 18,15 C18,13.3431458 16.6568542,12 15,12 C14.3930587,12 13.8175971,12.18044 13.3336047,12.504354 Z"
+            id="Combined-Shape"
+            fill="currentcolor"
+            opacity="0.3"
+          />
+          <circle id="Oval-14" fill="currentcolor" cx={12} cy={9} r={5} />
+        </g>
+      </svg>
+    ),
+    variant: 'bg-primary/20',
+    title: 'Eliminate Paper',
+    description:
+      'No more printing, signing, attaching, sealing, and sending documents by courier expenses.',
+  },
+  {
+    icon: (
+      <svg
+        className="w-7 h-7 text-orange-600"
+        viewBox="0 0 24 24"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+      >
+        <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
+          <polygon id="Shape" points="0 0 24 0 24 24 0 24" />
+          <path
+            d="M6,5 L18,5 C19.6568542,5 21,6.34314575 21,8 L21,17 C21,18.6568542 19.6568542,20 18,20 L6,20 C4.34314575,20 3,18.6568542 3,17 L3,8 C3,6.34314575 4.34314575,5 6,5 Z M5,17 L14,17 L9.5,11 L5,17 Z M16,14 C17.6568542,14 19,12.6568542 19,11 C19,9.34314575 17.6568542,8 16,8 C14.3431458,8 13,9.34314575 13,11 C13,12.6568542 14.3431458,14 16,14 Z"
+            id="Rectangle-25"
+            fill="currentcolor"
+          />
+        </g>
+      </svg>
+    ),
+    variant: 'bg-orange-500/10',
+    title: 'Slashing time and Cost',
+    description:
+      'Documents are transferred directly between parties slashing transfer time to minutes.',
+  },
+  {
+    icon: (
+      <svg
+        className="w-7 h-7 text-green-500"
+        viewBox="0 0 24 24"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+      >
+        <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
+          <rect id="bound" x={0} y={0} width={24} height={24} />
+          <path
+            d="M12.7442084,3.27882877 L19.2473374,6.9949025 C19.7146999,7.26196679 20.003129,7.75898194 20.003129,8.29726722 L20.003129,15.7027328 C20.003129,16.2410181 19.7146999,16.7380332 19.2473374,17.0050975 L12.7442084,20.7211712 C12.2830594,20.9846849 11.7169406,20.9846849 11.2557916,20.7211712 L4.75266256,17.0050975 C4.28530007,16.7380332 3.99687097,16.2410181 3.99687097,15.7027328 L3.99687097,8.29726722 C3.99687097,7.75898194 4.28530007,7.26196679 4.75266256,6.9949025 L11.2557916,3.27882877 C11.7169406,3.01531506 12.2830594,3.01531506 12.7442084,3.27882877 Z M12,14.5 C13.3807119,14.5 14.5,13.3807119 14.5,12 C14.5,10.6192881 13.3807119,9.5 12,9.5 C10.6192881,9.5 9.5,10.6192881 9.5,12 C9.5,13.3807119 10.6192881,14.5 12,14.5 Z"
+            id="Combined-Shape"
+            fill="currentcolor"
+          />
+        </g>
+      </svg>
+    ),
+    variant: 'bg-green-500/10',
+    title: 'Increasing Efficiency',
+    description:
+      'The instant transfer of documents between parties minimizes the delivery time for each transfer.',
+  },
+]
+
+
+
+const features1: Feature1[] = [
+  {
+    variant: 'bg-blue-500/10',
+    icon: (
+      <svg
+        className="h-7 w-7 text-blue-500"
+        viewBox="0 0 24 24"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+      >
+        <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
+          <rect id="bound" x={0} y={0} width={24} height={24} />
+          <path
+            d="M4,16 L5,16 C5.55228475,16 6,16.4477153 6,17 C6,17.5522847 5.55228475,18 5,18 L4,18 C3.44771525,18 3,17.5522847 3,17 C3,16.4477153 3.44771525,16 4,16 Z M1,11 L5,11 C5.55228475,11 6,11.4477153 6,12 C6,12.5522847 5.55228475,13 5,13 L1,13 C0.44771525,13 6.76353751e-17,12.5522847 0,12 C-6.76353751e-17,11.4477153 0.44771525,11 1,11 Z M3,6 L5,6 C5.55228475,6 6,6.44771525 6,7 C6,7.55228475 5.55228475,8 5,8 L3,8 C2.44771525,8 2,7.55228475 2,7 C2,6.44771525 2.44771525,6 3,6 Z"
+            id="Combined-Shape"
+            fill="currentColor"
+            opacity="0.3"
+          />
+          <path
+            d="M10,6 L22,6 C23.1045695,6 24,6.8954305 24,8 L24,16 C24,17.1045695 23.1045695,18 22,18 L10,18 C8.8954305,18 8,17.1045695 8,16 L8,8 C8,6.8954305 8.8954305,6 10,6 Z M21.0849395,8.0718316 L16,10.7185839 L10.9150605,8.0718316 C10.6132433,7.91473331 10.2368262,8.02389331 10.0743092,8.31564728 C9.91179228,8.60740125 10.0247174,8.9712679 10.3265346,9.12836619 L15.705737,11.9282847 C15.8894428,12.0239051 16.1105572,12.0239051 16.294263,11.9282847 L21.6734654,9.12836619 C21.9752826,8.9712679 22.0882077,8.60740125 21.9256908,8.31564728 C21.7631738,8.02389331 21.3867567,7.91473331 21.0849395,8.0718316 Z"
             id="Combined-Shape"
             fill="currentColor"
           />
-          <rect
-            id="Rectangle-28"
-            fill="currentColor"
-            opacity="0.3"
-            transform="translate(12.000000, 12.000000) rotate(-345.000000) translate(-12.000000, -12.000000) "
-            x={11}
-            y={4}
-            width={2}
-            height={16}
-            rx={1}
-          />
         </g>
       </svg>
     ),
-    name: 'Clean & Easy to Understand Code',
+    title: 'IMDA Tradetrust Framework',
+    description:
+      'Built on the robust IMDA Tradetrust framework, Easy BL ensures the highest standards of security and reliability for your electronic document transactions.',
   },
   {
+    variant: 'bg-red-500/10',
     icon: (
       <svg
-        className="w-6 h-6 text-primary"
+        className="h-7 w-7 text-red-500"
         viewBox="0 0 24 24"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
       >
         <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
-          <polygon id="Shape" points="0 0 24 0 24 24 0 24" />
-          <rect
-            id="Rectangle-25"
+          <rect id="bound" x={0} y={0} width={24} height={24} />
+          <path
+            d="M5,19 L20,19 C20.5522847,19 21,19.4477153 21,20 C21,20.5522847 20.5522847,21 20,21 L4,21 C3.44771525,21 3,20.5522847 3,20 L3,4 C3,3.44771525 3.44771525,3 4,3 C4.55228475,3 5,3.44771525 5,4 L5,19 Z"
+            id="Path-95"
+            fill="currentColor"
+          />
+          <path
+            d="M8.7295372,14.6839411 C8.35180695,15.0868534 7.71897114,15.1072675 7.31605887,14.7295372 C6.9131466,14.3518069 6.89273254,13.7189711 7.2704628,13.3160589 L11.0204628,9.31605887 C11.3857725,8.92639521 11.9928179,8.89260288 12.3991193,9.23931335 L15.358855,11.7649545 L19.2151172,6.88035571 C19.5573373,6.44687693 20.1861655,6.37289714 20.6196443,6.71511723 C21.0531231,7.05733733 21.1271029,7.68616551 20.7848828,8.11964429 L16.2848828,13.8196443 C15.9333973,14.2648593 15.2823707,14.3288915 14.8508807,13.9606866 L11.8268294,11.3801628 L8.7295372,14.6839411 Z"
+            id="Path-97"
             fill="currentColor"
             opacity="0.3"
-            x={2}
-            y={4}
-            width={20}
-            height={16}
-            rx={2}
           />
-          <polygon
+        </g>
+      </svg>
+    ),
+    title: 'In-Built Accounting Platform Integration',
+    description:
+      'Seamlessly integrate your trade transactions with our in-built accounting platform, streamlining your financial processes.',
+  },
+  {
+    variant: 'bg-teal-500/10',
+    icon: (
+      <svg
+        className="h-7 w-7 text-teal-500"
+        viewBox="0 0 24 24"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+      >
+        <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
+          <rect id="bound" x={0} y={0} width={24} height={24} />
+          <path
+            d="M18.6225,9.75 L18.75,9.75 C19.9926407,9.75 21,10.7573593 21,12 C21,13.2426407 19.9926407,14.25 18.75,14.25 L18.6854912,14.249994 C18.4911876,14.250769 18.3158978,14.366855 18.2393549,14.5454486 C18.1556809,14.7351461 18.1942911,14.948087 18.3278301,15.0846699 L18.372535,15.129375 C18.7950334,15.5514036 19.03243,16.1240792 19.03243,16.72125 C19.03243,17.3184208 18.7950334,17.8910964 18.373125,18.312535 C17.9510964,18.7350334 17.3784208,18.97243 16.78125,18.97243 C16.1840792,18.97243 15.6114036,18.7350334 15.1896699,18.3128301 L15.1505513,18.2736469 C15.008087,18.1342911 14.7951461,18.0956809 14.6054486,18.1793549 C14.426855,18.2558978 14.310769,18.4311876 14.31,18.6225 L14.31,18.75 C14.31,19.9926407 13.3026407,21 12.06,21 C10.8173593,21 9.81,19.9926407 9.81,18.75 C9.80552409,18.4999185 9.67898539,18.3229986 9.44717599,18.2361469 C9.26485393,18.1556809 9.05191298,18.1942911 8.91533009,18.3278301 L8.870625,18.372535 C8.44859642,18.7950334 7.87592081,19.03243 7.27875,19.03243 C6.68157919,19.03243 6.10890358,18.7950334 5.68746499,18.373125 C5.26496665,17.9510964 5.02757002,17.3784208 5.02757002,16.78125 C5.02757002,16.1840792 5.26496665,15.6114036 5.68716991,15.1896699 L5.72635306,15.1505513 C5.86570889,15.008087 5.90431906,14.7951461 5.82064513,14.6054486 C5.74410223,14.426855 5.56881236,14.310769 5.3775,14.31 L5.25,14.31 C4.00735931,14.31 3,13.3026407 3,12.06 C3,10.8173593 4.00735931,9.81 5.25,9.81 C5.50008154,9.80552409 5.67700139,9.67898539 5.76385306,9.44717599 C5.84431906,9.26485393 5.80570889,9.05191298 5.67216991,8.91533009 L5.62746499,8.870625 C5.20496665,8.44859642 4.96757002,7.87592081 4.96757002,7.27875 C4.96757002,6.68157919 5.20496665,6.10890358 5.626875,5.68746499 C6.04890358,5.26496665 6.62157919,5.02757002 7.21875,5.02757002 C7.81592081,5.02757002 8.38859642,5.26496665 8.81033009,5.68716991 L8.84944872,5.72635306 C8.99191298,5.86570889 9.20485393,5.90431906 9.38717599,5.82385306 L9.49484664,5.80114977 C9.65041313,5.71688974 9.7492905,5.55401473 9.75,5.3775 L9.75,5.25 C9.75,4.00735931 10.7573593,3 12,3 C13.2426407,3 14.25,4.00735931 14.25,5.25 L14.249994,5.31450877 C14.250769,5.50881236 14.366855,5.68410223 14.552824,5.76385306 C14.7351461,5.84431906 14.948087,5.80570889 15.0846699,5.67216991 L15.129375,5.62746499 C15.5514036,5.20496665 16.1240792,4.96757002 16.72125,4.96757002 C17.3184208,4.96757002 17.8910964,5.20496665 18.312535,5.626875 C18.7350334,6.04890358 18.97243,6.62157919 18.97243,7.21875 C18.97243,7.81592081 18.7350334,8.38859642 18.3128301,8.81033009 L18.2736469,8.84944872 C18.1342911,8.99191298 18.0956809,9.20485393 18.1761469,9.38717599 L18.1988502,9.49484664 C18.2831103,9.65041313 18.4459853,9.7492905 18.6225,9.75 Z"
+            id="Combined-Shape"
+            fill="currentColor"
+            opacity="0.3"
+          />
+          <path
+            d="M12,15 C13.6568542,15 15,13.6568542 15,12 C15,10.3431458 13.6568542,9 12,9 C10.3431458,9 9,10.3431458 9,12 C9,13.6568542 10.3431458,15 12,15 Z"
             id="Path"
             fill="currentColor"
-            opacity="0.3"
-            points="4 20 10.5 11 17 20"
-          />
-          <polygon
-            id="Path-Copy"
-            fill="currentColor"
-            points="11 20 15.5 14 20 20"
-          />
-          <circle
-            id="Oval-76"
-            fill="currentColor"
-            opacity="0.3"
-            cx="18.5"
-            cy="8.5"
-            r="1.5"
           />
         </g>
       </svg>
     ),
-    name: 'Font and SVG Icons',
-  },
-  {
-    icon: (
-      <svg
-        className="w-6 h-6 text-primary"
-        viewBox="0 0 24 24"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-      >
-        <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
-          <polygon id="Shape" points="0 0 24 0 24 24 0 24" />
-          <path
-            d="M9.26193932,16.6476484 C8.90425297,17.0684559 8.27315905,17.1196257 7.85235158,16.7619393 C7.43154411,16.404253 7.38037434,15.773159 7.73806068,15.3523516 L16.2380607,5.35235158 C16.6013618,4.92493855 17.2451015,4.87991302 17.6643638,5.25259068 L22.1643638,9.25259068 C22.5771466,9.6195087 22.6143273,10.2515811 22.2474093,10.6643638 C21.8804913,11.0771466 21.2484189,11.1143273 20.8356362,10.7474093 L17.0997854,7.42665306 L9.26193932,16.6476484 Z"
-            id="Path-94-Copy"
-            fill="currentColor"
-            opacity="0.3"
-            transform="translate(14.999995, 11.000002) rotate(-180.000000) translate(-14.999995, -11.000002) "
-          />
-          <path
-            d="M4.26193932,17.6476484 C3.90425297,18.0684559 3.27315905,18.1196257 2.85235158,17.7619393 C2.43154411,17.404253 2.38037434,16.773159 2.73806068,16.3523516 L11.2380607,6.35235158 C11.6013618,5.92493855 12.2451015,5.87991302 12.6643638,6.25259068 L17.1643638,10.2525907 C17.5771466,10.6195087 17.6143273,11.2515811 17.2474093,11.6643638 C16.8804913,12.0771466 16.2484189,12.1143273 15.8356362,11.7474093 L12.0997854,8.42665306 L4.26193932,17.6476484 Z"
-            id="Path-94"
-            fill="currentColor"
-            transform="translate(9.999995, 12.000002) rotate(-180.000000) translate(-9.999995, -12.000002) "
-          />
-        </g>
-      </svg>
-    ),
-    name: 'Free Updates',
+    title: 'Easy Third-Party Integration',
+    description:
+      'Effortlessly integrate Easy BL with third-party accounting or logistics applications, ensuring compatibility with your existing systems.',
   },
 ]
-export { landings, secondaryPages, accountPages, features }
+
+
+
+
+export { coins, features, benefits, features1 }

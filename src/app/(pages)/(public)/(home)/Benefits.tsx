@@ -1,5 +1,5 @@
 // types
-import { Service } from './types'
+import { Service } from '../../(protected)/landing/crypto/types'
 
 const Benefits = ({ services }: { services: Service[] }) => {
   return (

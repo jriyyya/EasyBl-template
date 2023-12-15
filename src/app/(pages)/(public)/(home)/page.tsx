@@ -1,29 +1,29 @@
-import AccountPages from './AccountPages'
-import CTA from './CTA'
-import Demos from './Demos'
+import { Metadata } from 'next'
+import Hero from './Hero'
 import Features from './Features'
-import InnerPages from './InnerPages'
+import Integration from './Integration'
+import Footer from '@/components/common/Footer'
 
 //data
-import { accountPages, features, landings, secondaryPages } from './data'
-import Hero from './Hero'
+import { features, benefits, features1 } from './data'
+import Benefits from './Benefits'
+import Features1 from './Features1'
 
-const Home = () => {
+export const metadata: Metadata = {
+  title: 'Crypto Landing',
+}
+
+const Crypto = () => {
   return (
     <>
       <Hero />
-
-      <Demos landings={landings} />
-
-      <InnerPages innerPages={secondaryPages} />
-
-      <AccountPages accountPages={accountPages} />
-
+      <Features1 features={features1} />
       <Features features={features} />
-
-      <CTA />
+      <Benefits services={benefits} />
+      <Integration />
+      <Footer />
     </>
   )
 }
 
-export default Home
+export default Crypto

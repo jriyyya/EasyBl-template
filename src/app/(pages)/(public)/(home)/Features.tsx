@@ -1,39 +1,45 @@
-import { Feature } from './types'
+import Image from 'next/image'
+
+// types
+import { Feature } from '../../(protected)/landing/crypto/types'
+
+//images
+import whiteWave from '@/assets/images/shapes/white-wave.svg'
 
 const Features = ({ features }: { features: Feature[] }) => {
   return (
-    <section className="py-20 bg-primary/10" data-aos="fade-up">
-      <div className="container">
+    <section className="py-36 bg-slate-500/10 relative" data-aos="fade-up">
+      <div className="absolute top-0 inset-x-0 hidden sm:block">
+        <Image src={whiteWave} alt="svg" className="w-full -scale-x-100" />
+      </div>
+      <div className="container relative">
         <div className="text-center">
           <span className="text-sm font-medium py-1 px-3 rounded-full text-primary bg-primary/10">
-            Features
+            Why Choose Us
           </span>
-          <h1 className="text-4xl my-4">Why Choose Prompt</h1>
-          <p className="text-slate-500 mb-14">
-            A modern design, fresh look and feel
+          <h1 className="text-3xl font-medium my-3">
+          Easy BL for Effortless Trade Transformation
+          </h1>
+          <p className="text-slate-400 mt-5 mb-4">
+            Here are the few reasons why you should choose us
           </p>
         </div>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
-          {(features ?? []).map((item, idx) => {
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-14">
+          {(features ?? []).map((feature, idx) => {
             return (
               <div
                 key={idx}
-                className="flex items-center gap-5 bg-white p-2 rounded"
-                data-aos="fade-up"
-                data-duration={600}
+                className="flex items-center gap-5 bg-white p-5 rounded-md shadow-slate-300"
               >
-                {item.icon ? (
-                  <span className="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
-                    {item.icon}
-                  </span>
-                ) : (
-                  <span className="flex items-center justify-center rounded-md w-12 h-12 bg-blue-100">
-                    <span className="text-xl font-semibold text-primary">
-                      {item.name[0]}
-                    </span>
-                  </span>
-                )}
-                <h5>{item.name}</h5>
+                <div>
+                  <div className="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-md">
+                    {feature.icon}
+                  </div>
+                </div>
+                <div>
+                  <h5 className="text-base font-semibold">{feature.title}</h5>
+                  <p className="text-slate-600 mt-2">{feature.description}</p>
+                </div>
               </div>
             )
           })}
