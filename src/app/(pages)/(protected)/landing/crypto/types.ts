@@ -9,6 +9,15 @@ export type Coin = {
   isSolid?: boolean
 }
 
+
+export type Feature1 = {
+  variant: string
+  icon: ReactNode
+  title: string
+  description: string
+}
+
+
 export type Feature = {
   icon: ReactNode
   title: string

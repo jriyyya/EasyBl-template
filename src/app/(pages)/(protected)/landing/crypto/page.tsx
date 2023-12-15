@@ -8,8 +8,9 @@ import Integration from './Integration'
 import Footer from '@/components/common/Footer'
 
 //data
-import { coins, features, benefits } from './data'
+import { coins, features, benefits, features1 } from './data'
 import Benefits from './Benefits'
+import Features1 from './Features1'
 
 export const metadata: Metadata = {
   title: 'Crypto Landing',
@@ -21,6 +22,8 @@ const Crypto = () => {
       <Hero />
 
       {/* <Coins coins={coins} /> */}
+
+      <Features1 features={features1} />
 
       <Benefits services={benefits} />
 
