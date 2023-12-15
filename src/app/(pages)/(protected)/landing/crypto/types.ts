@@ -14,3 +14,10 @@ export type Feature = {
   title: string
   description: string
 }
+
+export type Service = {
+  icon: ReactNode
+  variant: string
+  title: string
+  description: string
+}

@@ -40,23 +40,20 @@ const Integration = () => {
               </svg>
             </div>
             <h1 className="sm:text-3xl text-xl font-medium my-3">
-              Easy to Integrate - SDK
+            Simplify Transmission with MLETR Compliance
             </h1>
             <p className="text-slate-500 mt-5 mb-4">
-              Maecenas blandit aliquam sem, auctor accumsan mauris finibus
-              pellentesque. In vestibulum ac nunc ut rutrum. Donec mollis
-              viverra magna vel tincidunt.
+            Experience seamless electronic document transmission with Easy BLs MLETR-compliant module. Our code ensures secure and compliant transmission of documents, supporting various types such as eBL and eInvoice. 
             </p>
             <p className="text-slate-500 mt-5 mb-4">
-              Ut faucibus libero non tortor commodo, ac faucibus lectus
-              fermentum. Sed sit amet ornare turpis, ac lobortis urna.
+            Trust us for efficient and standardized document exchanges, revolutionizing your trade processes.
             </p>
             <div className="flex flex-wrap items-center gap-5 mt-12">
               <Link
                 href=""
                 className="py-3 px-6 rounded border border-primary text-white bg-primary hover:shadow-lg hover:shadow-primary/50 focus:outline focus:outline-primary/50 transition-all duration-500"
               >
-                Explore the SDK
+                Explore MLETR
               </Link>
               <Link
                 href=""
