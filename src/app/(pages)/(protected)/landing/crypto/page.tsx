@@ -25,9 +25,9 @@ const Crypto = () => {
 
       <Features1 features={features1} />
 
+      <Features features={features} />
       <Benefits services={benefits} />
 
-      <Features features={features} />
 
       <Integration />
 

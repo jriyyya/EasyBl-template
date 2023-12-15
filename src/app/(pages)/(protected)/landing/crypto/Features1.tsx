@@ -1,9 +1,9 @@
 // types
-import { Feature } from './types'
+import { Feature1 } from './types'
 
-const Features2 = ({ features }: { features: Feature[] }) => {
+const Features1 = ({ features }: { features: Feature1[] }) => {
   return (
-    <div className="py-10">
+    <div className="py-28">
       <div className="container">
         <div className="text-center">
           <span className="text-sm font-medium py-1 px-3 rounded-full text-primary bg-primary/10">
@@ -37,4 +37,4 @@ const Features2 = ({ features }: { features: Feature[] }) => {
   )
 }
 
-export default Features2
+export default Features1

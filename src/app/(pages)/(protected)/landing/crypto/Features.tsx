@@ -8,7 +8,7 @@ import whiteWave from '@/assets/images/shapes/white-wave.svg'
 
 const Features = ({ features }: { features: Feature[] }) => {
   return (
-    <section className="py-24 bg-slate-500/10 relative" data-aos="fade-up">
+    <section className="py-36 bg-slate-500/10 relative" data-aos="fade-up">
       <div className="absolute top-0 inset-x-0 hidden sm:block">
         <Image src={whiteWave} alt="svg" className="w-full -scale-x-100" />
       </div>
