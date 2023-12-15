@@ -306,9 +306,9 @@ const features1: Feature1[] = [
         </g>
       </svg>
     ),
-    title: 'Automated Campaigns',
+    title: 'IMDA Tradetrust Framework',
     description:
-      'Praesent ipsum libero, sollicitudin elementum et, condimentum non augue.',
+      'Built on the robust IMDA Tradetrust framework, Easy BL ensures the highest standards of security and reliability for your electronic document transactions.',
   },
   {
     variant: 'bg-red-500/10',
@@ -336,9 +336,9 @@ const features1: Feature1[] = [
         </g>
       </svg>
     ),
-    title: 'Business Analytics',
+    title: 'In-Built Accounting Platform Integration',
     description:
-      'Mauris dapibus blandit hendrerit. Proin auctor est at bibendum odio faucibus sodales.',
+      'Seamlessly integrate your trade transactions with our in-built accounting platform, streamlining your financial processes.',
   },
   {
     variant: 'bg-teal-500/10',
@@ -366,9 +366,9 @@ const features1: Feature1[] = [
         </g>
       </svg>
     ),
-    title: 'Easy Setup',
+    title: 'Easy Third-Party Integration',
     description:
-      'Fusce mattis nibh vel tortor scelerisque, a pretium dolor posuere.',
+      'Effortlessly integrate Easy BL with third-party accounting or logistics applications, ensuring compatibility with your existing systems.',
   },
 ]
 
